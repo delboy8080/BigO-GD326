@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Pair.h"
+#include "DynamicArray.h"
 
 using namespace std;
 
@@ -40,7 +41,7 @@ struct book
 
 int main()
 {
-	question4();
+	question5();
 }
 
 template <typename T>
@@ -116,7 +117,27 @@ void question4()
 }
 void question5()
 {
+	DynamicArray<char> cars;
+	for (int i = 65; i <= 90;i++)
+	{
+		cars.add(i);
+	}
+	for (int i = 0; i < cars.size();i++)
+	{
+		if (i != 0)
+			cout << ", ";
+		cout << cars[i];
+	}
+	cout << endl;
+	cars[0] = 'a';
 
+	for (int i = 0; i < cars.size();i++)
+	{
+		if (i != 0)
+			cout << ", ";
+		cout << cars.get(i);
+	}
+	cout << endl;
 }
 void question6()
 {
