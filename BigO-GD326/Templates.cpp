@@ -109,10 +109,10 @@ void question3()
 void question4()
 {
 	Pair<int, string> p1(1, "one");
-	cout << p1.getFirst() << " -> " << p1.getSecond() << endl;
+	cout << p1;
 	Pair<string, book> p2("ASD-123456", book("The widow", "John Grisham"));
-	cout << p2.getFirst() << " -> " << p2.getSecond()<<endl;
-
+	cout << p2;
+	
 }
 void question5()
 {

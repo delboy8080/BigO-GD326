@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using std::ostream;
 template <class K, class V>
 class Pair
 {
@@ -10,8 +12,17 @@ public:
 	V getSecond();
 	void setFirst(K f);
 	void setSecond(V s);
+
+	template <class K, class V>
+	friend ostream& operator<<(ostream& os, Pair<K, V> p);
+
 };
 
+template <class K, class V>
+ostream& operator<<(ostream& os, Pair<K, V> p)
+{
+	return os << p.getFirst() << "->" << p.getSecond() << std::endl;
+}
 template <class K, class V>
 Pair<K, V>::Pair(K f, V s)
 {
