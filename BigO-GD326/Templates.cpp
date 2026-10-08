@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Pair.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ struct book
 
 int main()
 {
-	question3();
+	question4();
 }
 
 template <typename T>
@@ -107,6 +108,10 @@ void question3()
 }
 void question4()
 {
+	Pair<int, string> p1(1, "one");
+	cout << p1.getFirst() << " -> " << p1.getSecond() << endl;
+	Pair<string, book> p2("ASD-123456", book("The widow", "John Grisham"));
+	cout << p2.getFirst() << " -> " << p2.getSecond()<<endl;
 
 }
 void question5()
